@@ -13,6 +13,7 @@ export class AppComponent {
     return a + b;
   }
 
+  
   sayHi(user) {
     console.log('hello');
     return 'nikhil';
@@ -22,6 +23,6 @@ export class AppComponent {
     return userName.toUpperCase();
   }
 
-  
+
 
 }
