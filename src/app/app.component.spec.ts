@@ -28,4 +28,45 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to unitTesting!');
   });
+
+
+  // method existence
+
+  it('sayHi shouldexists' , () => {
+    const fixture =  TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(AppComponent.prototype.sayHi).toBeTruthy();
+  })
+
+  it('sumTwoNumbers should exists', ()=>{
+    const fixture =  TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(AppComponent.prototype.sumTwoNumbers).toBeTruthy();
+  })
+
+  it('convertToUpperCase should exists', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(AppComponent.prototype.convertToUpperCase).toBeTruthy();
+  })
+
+
+  it('should render the user name', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(AppComponent.prototype.sayHi('nikhil')).toEqual('nikhil');
+  })
+
+  it('should sum of two numbers equal to three', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(AppComponent.prototype.sumTwoNumbers(1, 2)).toEqual(3);
+  })
+
+  it('should convert the string to the upper case',() => {
+    const fixture =  TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(AppComponent.prototype.convertToUpperCase('nikhil')).toEqual('NIKHIL')
+  })
+
 });
